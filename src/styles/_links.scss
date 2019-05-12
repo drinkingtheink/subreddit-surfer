@@ -1,0 +1,13 @@
+a {
+  color: $color2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active,
+a:visited {
+  color: black;
+}

@@ -1,0 +1,18 @@
+@import './_animations';
+
+.search-message {
+  @include introAnimation;
+  background-color: rgba(white, .5);
+  margin: 0 auto;
+  max-width: 60vw;
+  padding: 1rem 1rem 3rem 1rem;
+  color: $color3;
+
+  h2 {
+    text-transform: uppercase;
+  }
+}
+
+.message-text {
+  padding: 0 2em;
+}

@@ -1,0 +1,20 @@
+button {
+  border: none;
+  padding: .75rem 1.75rem;
+  text-transform: uppercase;
+  border-radius: $app-border-radius;
+  color: white;
+  font-size: 1rem;
+  background-color: $color3;
+
+  &:hover {
+    cursor: pointer;
+    background-color: darken($color3, 10%);
+  }
+
+  &.disabled {
+    opacity: .3;
+    pointer-events: none;
+    background-color: $dark_gray;
+  }
+}

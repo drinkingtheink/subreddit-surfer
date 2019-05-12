@@ -1,0 +1,18 @@
+@import './_bg_texture';
+
+body,
+html {
+  @include bgTexture;
+  position: relative;
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+}
+
+.main-headline {
+  margin: 0;
+  padding: 2rem 0;
+  text-transform: uppercase;
+}

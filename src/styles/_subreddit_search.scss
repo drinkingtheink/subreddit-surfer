@@ -1,0 +1,39 @@
+.subreddit-search {
+  
+}
+
+.subreddit-search__input-stage {
+  background: white;
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid $color2;
+
+  .reddit-logo {
+    display: inline-block;
+    width: 2em;
+    margin-bottom: -1rem;
+    margin-right: .5rem;
+  }
+}
+
+.search-input-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.subreddit-search__input {
+  width: 50vw;
+  border-left: 3px solid $color3;
+}
+
+.actions {
+  margin-bottom: 1rem;
+
+  button {
+    margin-right: .25rem;
+  }
+}
+
+.current-subreddit {
+  text-transform: uppercase;
+}

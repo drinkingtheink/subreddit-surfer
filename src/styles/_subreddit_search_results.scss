@@ -1,0 +1,157 @@
+@import './_animations';
+
+$reveal-animation: fadeInUp .2s;
+
+.search-results {
+  padding: 0 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+
+  * {
+    transition: all .2s;
+  }
+}
+
+.search-results-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: inherit;
+}
+
+.search-results-header {
+  width: 60vw;
+  border-bottom: 1px solid rgba(black, .2);
+  margin: 0 auto;
+  padding-bottom: .5rem;
+}
+
+.search-result {
+  width: 25%;
+  margin: 0 .5rem 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  position: relative;
+  animation: $reveal-animation;
+
+  .post-headline {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    $pointer-after-border-width: 20px;
+    $pointer-before-border-width: 26px;
+
+    a {
+      display: block;
+      min-height: 5em;
+      text-decoration: none;
+      color: $color3;
+      text-align: left;
+      background-color: white;
+      padding: 1rem;
+      border: 4px transparent solid;
+      border-radius: 5px;
+      position: relative;
+      animation: $reveal-animation;
+
+      &:hover {
+        color: $dark_gray;
+        border-color: $color3;
+
+        .prefixed-subreddit {
+          color: $color3;
+        }
+      }
+
+      &:visited {
+        background-color: $color5;
+        color: white;
+
+        &:hover {
+          border-color: $color5;
+          background-color: darken($color5, 10%);
+        }
+
+        &:after {
+          border-top-color: $color5;
+          border-width: $pointer-after-border-width;
+          margin-left: -$pointer-after-border-width;
+        }
+        &:before {
+          border-top-color: $color5;
+          border-width: $pointer-before-border-width;
+          margin-left: -$pointer-before-border-width;
+        }
+
+        .post-thumbnail {
+          border-color: $color1;
+        }
+      }
+
+      &:after, 
+      &:before {
+        top: 100%;
+        left: 2rem;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+
+      &:after {
+        border-color: rgba(84, 106, 118, 0);
+        border-top-color: white;
+        border-width: $pointer-after-border-width;
+        margin-left: -$pointer-after-border-width;
+      }
+      &:before {
+        border-color: rgba(84, 106, 118, 0);
+        border-top-color: white;
+        border-width: $pointer-before-border-width;
+        margin-left: -$pointer-before-border-width;
+      }
+    }
+  }
+
+  .prefixed-subreddit {
+    margin: 0 0 .5rem 0;
+    padding: 0;
+    font-size: .8rem;
+    text-transform: uppercase;
+    color: rgba($dark_gray, .7);
+  }
+
+  .post-author {
+    margin: 0;
+    text-align: left;
+    font-weight: bold;
+    padding: 0 0 1rem 1rem;
+  }
+
+  .post-comments-count {
+    display: block;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    margin-top: .5rem;
+    background-color: rgba($dark_gray, .1);
+    border-radius: 10px;
+    color: $dark_gray;
+  }
+}
+
+$post-thumbnail-dim: 2em;
+
+.post-thumbnail {
+  display: block;
+  height: $post-thumbnail-dim;
+  width: $post-thumbnail-dim;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid $color3;
+  margin: .5rem 0;
+}

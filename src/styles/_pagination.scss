@@ -1,0 +1,24 @@
+.clickable-nav {
+  margin-left: 1rem;
+}
+
+$group-click-dimension: .75em;
+
+.group-click {
+  display: inline-block;
+  opacity: .7;
+  border-radius: 50%;
+  height: $group-click-dimension;
+  width: $group-click-dimension;
+  background-color: $dark_gray;
+  margin-right: .25rem;
+
+  &.active {
+    opacity: 1;
+    background-color: $color3;
+  }
+}
+
+.pagination-meta {
+  margin: .5rem 0;
+}
